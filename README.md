@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# AI Mock Interview Platform 🎙️🤖
 
-First, run the development server:
+_Real‑time voice interviews with instant feedback._
+
+[Live Demo](https://ai-mock-interview-self-three.vercel.app/) • [GitHub Repo](https://github.com/yashG72/AI_mock_interview)
+
+</div>
+
+---
+
+## 📖 Overview
+**AI Mock Interview** helps students and professionals sharpen their interview skills by simulating real‑time voice calls with an AI interviewer.
+
+1. **Ask & Answer** – The AI poses role‑specific questions and listens to spoken replies.  
+2. **Instant Feedback** – Key points, improvement tips, and a confidence score are shown at the end of every session.  
+3. **Session History** – Previous interviews are stored so users can track progress over time.
+
+---
+
+## ✨ Key Features
+| Feature | Details |
+| ------- | ------- |
+| 🔊 **Voice Interaction** | Powered by **Vapi AI** for low‑latency speech‑to‑text / text‑to‑speech |
+| 🔐 **Auth & Database**   | Firebase Auth + Firestore for user sessions and interview logs |
+| ⚡ **Next 13 ( `app/` )** | Server Components + `next/font` (Geist) + built‑in image optimisation |
+| 🎨 **Tailwind CSS**      | Mobile‑first, dark‑mode ready UI |
+| 🚀 **Vercel Deployment** | Zero‑config CI/CD & automatic previews |
+
+---
+
+## 🖥️ Tech Stack
+| Layer               | Tech |
+| ------------------- | ---- |
+| Frontend / SSR      | **Next.js 13**, **TypeScript**, **Tailwind CSS** |
+| Realtime Voice AI   | **Vapi AI** |
+| Auth & Database     | **Firebase Auth**, **Firestore** |
+| Hosting / CI/CD     | **Vercel** |
+| Lint & Formatting   | ESLint ✚ Prettier |
+
+---
+
+## 🔧 Local Setup
+
+> **Prerequisites:** Node ≥ 18, pnpm / npm / yarn
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 1  Clone
+git clone https://github.com/yashG72/AI_mock_interview.git
+cd AI_mock_interview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 2  Install deps
+pnpm install        # or npm install / yarn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 3  Environment
+cp .env.example .env.local
+#  → Add your Vapi, Firebase keys, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 4  Run dev server
+pnpm dev            # or npm run dev / yarn dev
+# Open http://localhost:3000
